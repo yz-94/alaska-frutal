@@ -2,15 +2,9 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <title>Alaska Frutal — Catálogo</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
     <style>
       :root {
         --pink: #e8306a;
@@ -25,62 +19,31 @@
         --price: #e8306a;
       }
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        -webkit-tap-highlight-color: transparent;
-      }
+      * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
       body {
         font-family: "Nunito", sans-serif;
-        background: linear-gradient(
-          160deg,
-          #ff6b9d 0%,
-          #e8306a 20%,
-          #7b2fbe 50%,
-          #00c8d7 80%,
-          #6eeaf7 100%
-        );
+        background: linear-gradient(160deg, #ff6b9d 0%, #e8306a 20%, #7b2fbe 50%, #00c8d7 80%, #6eeaf7 100%);
         min-height: 100vh;
         overflow-x: hidden;
       }
 
-      /* Animated blob background */
       body::before {
         content: "";
         position: fixed;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
+        top: -50%; left: -50%;
+        width: 200%; height: 200%;
         background:
-          radial-gradient(
-            ellipse at 20% 20%,
-            rgba(255, 107, 157, 0.4) 0%,
-            transparent 50%
-          ),
-          radial-gradient(
-            ellipse at 80% 80%,
-            rgba(0, 200, 215, 0.4) 0%,
-            transparent 50%
-          ),
-          radial-gradient(
-            ellipse at 50% 50%,
-            rgba(123, 47, 190, 0.3) 0%,
-            transparent 60%
-          );
+          radial-gradient(ellipse at 20% 20%, rgba(255,107,157,0.4) 0%, transparent 50%),
+          radial-gradient(ellipse at 80% 80%, rgba(0,200,215,0.4) 0%, transparent 50%),
+          radial-gradient(ellipse at 50% 50%, rgba(123,47,190,0.3) 0%, transparent 60%);
         animation: blobmove 12s ease-in-out infinite alternate;
         z-index: 0;
       }
 
       @keyframes blobmove {
-        0% {
-          transform: translate(0, 0) rotate(0deg);
-        }
-        100% {
-          transform: translate(5%, 5%) rotate(5deg);
-        }
+        0%   { transform: translate(0,0) rotate(0deg); }
+        100% { transform: translate(5%,5%) rotate(5deg); }
       }
 
       .wrapper {
@@ -91,7 +54,7 @@
         padding-bottom: 40px;
       }
 
-      /* ── HERO HEADER ── */
+      /* ── HERO ── */
       .hero {
         display: flex;
         flex-direction: column;
@@ -101,55 +64,40 @@
       }
 
       .logo-wrap {
-        width: 160px;
-        height: 160px;
+        width: 300px; height: 300px;
         background: white;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow:
-          0 8px 32px rgba(0, 0, 0, 0.25),
-          0 0 0 6px rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px rgba(0,0,0,0.25), 0 0 0 6px rgba(255,255,255,0.3);
         margin-bottom: 20px;
         padding: 12px;
         overflow: hidden;
-        animation: logopop 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+        animation: logopop 0.7s cubic-bezier(0.34,1.56,0.64,1) both;
       }
 
       @keyframes logopop {
-        0% {
-          transform: scale(0.5);
-          opacity: 0;
-        }
-        100% {
-          transform: scale(1);
-          opacity: 1;
-        }
+        0%   { transform: scale(0.5); opacity: 0; }
+        100% { transform: scale(1);   opacity: 1; }
       }
 
-      .logo-wrap img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
+      .logo-wrap img { width: 150%; height: 150%; object-fit: contain; }
 
       .hero-tagline {
         font-family: "Fredoka One", cursive;
         font-size: 15px;
-        color: rgba(255, 255, 255, 0.9);
+        color: rgba(255,255,255,0.9);
         letter-spacing: 3px;
         text-transform: uppercase;
-        background: rgba(0, 0, 0, 0.2);
+        background: rgba(0,0,0,0.2);
         padding: 6px 18px;
         border-radius: 20px;
         backdrop-filter: blur(4px);
       }
 
-      /* ── SECTION HEADERS ── */
-      .section {
-        margin: 10px 16px 0;
-      }
+      /* ── SECTION ── */
+      .section { margin: 10px 16px 0; }
 
       .section-header {
         display: flex;
@@ -157,35 +105,32 @@
         gap: 12px;
         margin-bottom: 14px;
         padding: 14px 18px;
-        background: rgba(255, 255, 255, 0.15);
+        background: rgba(255,255,255,0.15);
         backdrop-filter: blur(10px);
         border-radius: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.3);
+        border: 1px solid rgba(255,255,255,0.3);
       }
 
-      .section-icon {
-        font-size: 28px;
-        flex-shrink: 0;
-      }
+      .section-icon { font-size: 28px; flex-shrink: 0; }
 
       .section-title {
         font-family: "Fredoka One", cursive;
         font-size: 22px;
         color: white;
-        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        text-shadow: 0 2px 8px rgba(0,0,0,0.3);
         line-height: 1.1;
       }
 
       .section-sub {
         font-size: 11px;
-        color: rgba(255, 255, 255, 0.8);
+        color: rgba(255,255,255,0.8);
         font-weight: 600;
         letter-spacing: 1px;
         text-transform: uppercase;
         margin-top: 2px;
       }
 
-      /* ── PRODUCT GRID ── */
+      /* ── GRID ── */
       .grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -193,40 +138,24 @@
         padding: 0 16px;
         margin-bottom: 8px;
       }
+      .grid.single { grid-template-columns: 1fr; }
+      .grid.wide   { grid-template-columns: 1fr; }
 
-      .grid.single {
-        grid-template-columns: 1fr;
-      }
-
-      .grid.wide {
-        grid-template-columns: 1fr;
-      }
-
-      /* ── PRODUCT CARD ── */
+      /* ── CARD ── */
       .card {
         background: white;
         border-radius: 20px;
         overflow: hidden;
-        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+        box-shadow: 0 6px 24px rgba(0,0,0,0.18);
         display: flex;
         flex-direction: column;
         transform: translateY(30px);
         opacity: 0;
-        transition:
-          transform 0.5s cubic-bezier(0.34, 1.3, 0.64, 1),
-          opacity 0.4s ease,
-          box-shadow 0.2s;
+        transition: transform 0.5s cubic-bezier(0.34,1.3,0.64,1), opacity 0.4s ease, box-shadow 0.2s;
       }
 
-      .card.visible {
-        transform: translateY(0);
-        opacity: 1;
-      }
-
-      .card:active {
-        transform: scale(0.97);
-        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
-      }
+      .card.visible { transform: translateY(0); opacity: 1; }
+      .card:active  { transform: scale(0.97); box-shadow: 0 3px 12px rgba(0,0,0,0.15); }
 
       .card-img-wrap {
         position: relative;
@@ -235,23 +164,16 @@
         overflow: hidden;
         background: linear-gradient(135deg, #f5f5f5 0%, #ececec 100%);
       }
-
-      .grid.wide .card-img-wrap {
-        aspect-ratio: 16 / 9;
-      }
+      .grid.wide .card-img-wrap { aspect-ratio: 16 / 9; }
 
       .card-img-wrap img {
-        width: 100%;
-        height: 100%;
+        width: 100%; height: 100%;
         object-fit: cover;
         object-position: center top;
         mix-blend-mode: multiply;
         transition: transform 0.4s ease;
       }
-
-      .card:active .card-img-wrap img {
-        transform: scale(1.04);
-      }
+      .card:active .card-img-wrap img { transform: scale(1.04); }
 
       .card-body {
         padding: 12px 14px 14px;
@@ -261,75 +183,172 @@
         gap: 5px;
       }
 
-      .card-name {
+      .card-name { font-family: "Fredoka One", cursive; font-size: 16px; color: var(--dark); line-height: 1.2; }
+      .grid.wide .card-name { font-size: 20px; }
+
+      .card-desc { font-size: 11.5px; color: #666; font-weight: 600; line-height: 1.4; flex: 1; }
+      .grid.wide .card-desc { font-size: 13px; }
+
+      .card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 6px; }
+
+      .price-label { font-size: 10px; color: #aaa; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+
+      .price { font-family: "Fredoka One", cursive; font-size: 20px; color: var(--pink); line-height: 1; }
+      .grid.wide .price { font-size: 26px; }
+
+      /* ── DIVIDER ── */
+      .divider {
+        margin: 20px 16px 16px;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+        border-radius: 2px;
+      }
+
+      /* ══════════════════════════════════════
+         REDES SOCIALES
+      ══════════════════════════════════════ */
+      .social-section {
+        margin: 8px 16px 0;
+      }
+
+      .social-card {
+        background: rgba(255,255,255,0.12);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255,255,255,0.25);
+        border-radius: 28px;
+        padding: 28px 22px 24px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Decorative blobs inside the card */
+      .social-card::before {
+        content: '';
+        position: absolute;
+        top: -40px; right: -40px;
+        width: 140px; height: 140px;
+        background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .social-card::after {
+        content: '';
+        position: absolute;
+        bottom: -30px; left: -30px;
+        width: 110px; height: 110px;
+        background: radial-gradient(circle, rgba(0,200,215,0.2), transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .social-title {
         font-family: "Fredoka One", cursive;
-        font-size: 16px;
-        color: var(--dark);
-        line-height: 1.2;
-      }
-
-      .grid.wide .card-name {
         font-size: 20px;
+        color: white;
+        margin-bottom: 4px;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.2);
       }
 
-      .card-desc {
-        font-size: 11.5px;
-        color: #666;
-        font-weight: 600;
-        line-height: 1.4;
-        flex: 1;
+      .social-subtitle {
+        font-size: 12px;
+        color: rgba(255,255,255,0.7);
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 22px;
       }
 
-      .grid.wide .card-desc {
-        font-size: 13px;
+      .social-links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
       }
 
-      .card-footer {
+      .social-btn {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        margin-top: 6px;
+        gap: 14px;
+        padding: 14px 18px;
+        border-radius: 18px;
+        text-decoration: none;
+        font-family: "Nunito", sans-serif;
+        font-weight: 800;
+        font-size: 14px;
+        transition: transform 0.2s cubic-bezier(0.34,1.5,0.64,1), box-shadow 0.2s;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        border: none;
+        width: 100%;
+        text-align: left;
       }
 
-      .price-label {
-        font-size: 10px;
-        color: #aaa;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
+      .social-btn:active {
+        transform: scale(0.96) !important;
       }
 
-      .price {
-        font-family: "Fredoka One", cursive;
-        font-size: 20px;
-        color: var(--pink);
-        line-height: 1;
+      /* Instagram gradient */
+      .social-btn.instagram {
+        background: linear-gradient(135deg, #f9ce34 0%, #ee2a7b 40%, #6228d7 100%);
+        color: white;
+        box-shadow: 0 6px 20px rgba(238,42,123,0.4);
+      }
+      .social-btn.instagram:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(238,42,123,0.5); }
+
+      /* WhatsApp green */
+      .social-btn.whatsapp {
+        background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+        color: white;
+        box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+      }
+      .social-btn.whatsapp:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(37,211,102,0.5); }
+
+      /* TikTok dark */
+      .social-btn.tiktok {
+        background: linear-gradient(135deg, #010101 0%, #161616 50%, #2b2b2b 100%);
+        color: white;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        border: 1px solid rgba(255,255,255,0.08);
+      }
+      .social-btn.tiktok:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.5); }
+
+      .social-btn-icon {
+        width: 42px; height: 42px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        background: rgba(255,255,255,0.2);
       }
 
-      .grid.wide .price {
-        font-size: 26px;
-      }
+      .social-btn-icon svg { width: 22px; height: 22px; }
 
-      .price-placeholder {
-        font-size: 11px;
-        color: #ccc;
-        font-style: italic;
+      .social-btn-text { flex: 1; }
+      .social-btn-label { font-size: 10px; opacity: 0.75; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 2px; }
+      .social-btn-handle { font-size: 15px; font-weight: 800; display: block; }
+
+      .social-btn-arrow {
+        opacity: 0.5;
+        font-size: 18px;
+        flex-shrink: 0;
       }
 
       /* ── FOOTER ── */
       .footer {
         text-align: center;
         padding: 28px 20px 10px;
-        color: rgba(255, 255, 255, 0.7);
+        color: rgba(255,255,255,0.7);
         font-size: 12px;
         font-weight: 600;
         letter-spacing: 1px;
       }
 
       .footer-logo {
-        width: 60px;
-        height: 60px;
-        background: rgba(255, 255, 255, 0.15);
+        width: 100px; height: 100px;
+        background: rgba(255,255,255,0.15);
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -338,27 +357,34 @@
         padding: 8px;
       }
 
-      .footer-logo img {
-        width: 100%;
-        object-fit: contain;
+      .footer-logo img { width: 100%; object-fit: contain; }
+
+      .footer-socials {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        margin: 14px 0 6px;
       }
 
-      /* ── DIVIDER ── */
-      .divider {
-        margin: 20px 16px 16px;
-        height: 2px;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          rgba(255, 255, 255, 0.4),
-          transparent
-        );
-        border-radius: 2px;
+      .footer-social-dot {
+        width: 36px; height: 36px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: transform 0.2s, background 0.2s;
+        border: 1px solid rgba(255,255,255,0.3);
       }
+
+      .footer-social-dot:active { transform: scale(0.92); }
+      .footer-social-dot svg { width: 18px; height: 18px; fill: white; }
     </style>
   </head>
   <body>
     <div class="wrapper">
+
       <!-- HERO -->
       <div class="hero">
         <div class="logo-wrap">
@@ -367,8 +393,7 @@
         <div class="hero-tagline">✨ Nuestro menú ✨</div>
       </div>
 
-      <!-- SECCIÓN: CREPES Y WAFFLES -->
-
+      <!-- CREPES Y WAFFLES -->
       <div class="section">
         <div class="section-header">
           <div class="section-icon">🧇</div>
@@ -380,79 +405,40 @@
       </div>
       <div class="grid">
         <div class="card">
-          <div class="card-img-wrap">
-            <img src="./img/crepes.png.jpeg" alt="Crepes" />
-          </div>
+          <div class="card-img-wrap"><img src="./img/crepes.png.jpeg" alt="Crepes" /></div>
           <div class="card-body">
             <div class="card-name">Crepes</div>
-            <div class="card-desc">
-              Crepes acompañados de salsa de chocolate, un sabor de helado,
-              queso, trozos de durazno, cereza y chantilly.
-            </div>
-            <div class="card-footer">
-              <div>
-                <div class="price-label">Precio</div>
-                <div class="price">$ 14.000</div>
-              </div>
-            </div>
+            <div class="card-desc">Crepes acompañados de salsa de chocolate, un sabor de helado, queso, trozos de durazno, cereza y chantilly.</div>
+            <div class="card-footer"><div><div class="price-label">Precio</div><div class="price">$ 14.000</div></div></div>
           </div>
         </div>
         <div class="card">
-          <div class="card-img-wrap">
-            <img src="./img/waffle-frutal.jpeg" alt="Waffle Frutal" />
-          </div>
+          <div class="card-img-wrap"><img src="./img/waffle-frutal.jpeg" alt="Waffle Frutal" /></div>
           <div class="card-body">
             <div class="card-name">Waffle Frutal</div>
-            <div class="card-desc">
-              Waffle acompañado de salsa a eleccion, trozos de durazno, fresa,
-              un sabor de helado, lluvia de chocolate, cereza y chantilly.
-            </div>
-            <div class="card-footer">
-              <div>
-                <div class="price-label">Precio</div>
-                <div class="price">$ 17.000</div>
-              </div>
-            </div>
+            <div class="card-desc">Waffle acompañado de salsa a elección, trozos de durazno, fresa, un sabor de helado, lluvia de chocolate, cereza y chantilly.</div>
+            <div class="card-footer"><div><div class="price-label">Precio</div><div class="price">$ 17.000</div></div></div>
           </div>
         </div>
         <div class="card">
-          <div class="card-img-wrap">
-            <img src="./img/waffle-pandebono.jpeg" alt="Waffle Pandebobo" />
-          </div>
+          <div class="card-img-wrap"><img src="./img/waffle-pandebono.jpeg" alt="Waffle Pandebono" /></div>
           <div class="card-body">
             <div class="card-name">Waffle Pandebono</div>
-            <div class="card-desc">
-              Waffle de pandebono, acompañado de salsa a eleccion, dos sabores
-              de helado, queso, cereza y chantilly
-            </div>
-            <div class="card-footer">
-              <div>
-                <div class="price-label">Precio</div>
-                <div class="price">$17.000</div>
-              </div>
-            </div>
+            <div class="card-desc">Waffle de pandebono, acompañado de salsa a elección, dos sabores de helado, queso, cereza y chantilly.</div>
+            <div class="card-footer"><div><div class="price-label">Precio</div><div class="price">$ 17.000</div></div></div>
           </div>
         </div>
         <div class="card">
-          <div class="card-img-wrap">
-            <img src="./img/waffle-chocolate.jpeg" alt="Waffle Chocolate" />
-          </div>
+          <div class="card-img-wrap"><img src="./img/waffle-chocolate.jpeg" alt="Waffle Chocolate" /></div>
           <div class="card-body">
             <div class="card-name">Waffle Chocolate</div>
-            <div class="card-desc">
-              Waffle acompañado de salsa de chocolate,un sabor de helado, trozos
-              de galleta oreo, chokis, chocolatina jet y chantilly.
-            </div>
-            <div class="card-footer">
-              <div>
-                <div class="price-label">Precio</div>
-                <div class="price">$ 17.000</div>
-              </div>
-            </div>
+            <div class="card-desc">Waffle acompañado de salsa de chocolate, un sabor de helado, trozos de galleta oreo, chokis, chocolatina jet y chantilly.</div>
+            <div class="card-footer"><div><div class="price-label">Precio</div><div class="price">$ 17.000</div></div></div>
           </div>
         </div>
       </div>
-      <!-- SECCIÓN: OBLEAS -->
+
+      <!-- OBLEAS -->
       <div class="section">
         <div class="section-header">
           <div class="section-icon">🫓</div>
@@ -464,44 +450,26 @@
       </div>
       <div class="grid">
         <div class="card">
-          <div class="card-img-wrap">
-            <img src="img/obleas.jpeg" alt="Obleas" />
-          </div>
+          <div class="card-img-wrap"><img src="./img/obleas.jpeg" alt="Obleas" /></div>
           <div class="card-body">
             <div class="card-name">Oblea especial</div>
-            <div class="card-desc">
-              Oblea acompañada de salsa de arequipe, queso, fresa y chantilly.
-            </div>
-            <div class="card-footer">
-              <div>
-                <div class="price-label">Precio</div>
-                <div class="price">$ 11.000</div>
-              </div>
-            </div>
+            <div class="card-desc">Oblea acompañada de salsa de arequipe, queso, fresa y chantilly.</div>
+            <div class="card-footer"><div><div class="price-label">Precio</div><div class="price">$ 11.000</div></div></div>
           </div>
         </div>
         <div class="card">
-          <div class="card-img-wrap">
-            <img src="./img/obleas.jpeg" alt="Obleas" />
-          </div>
+          <div class="card-img-wrap"><img src="./img/Oblea con arequipe y queso.png" alt="Oblea sencilla" /></div>
           <div class="card-body">
             <div class="card-name">Oblea sencilla</div>
-            <div class="card-desc">
-              Oblea acompañada con salsa de arequipe y queso
-            </div>
-            <div class="card-footer">
-              <div>
-                <div class="price-label">Precio</div>
-                <div class="price">$ 7.000</div>
-              </div>
-            </div>
+            <div class="card-desc">Oblea acompañada con salsa de arequipe y queso.</div>
+            <div class="card-footer"><div><div class="price-label">Precio</div><div class="price">$ 7.000</div></div></div>
           </div>
         </div>
       </div>
 
       <div class="divider"></div>
 
-      <!-- SECCIÓN: COPAS ESPECIALES -->
+      <!-- COPAS ESPECIALES -->
       <div class="section">
         <div class="section-header">
           <div class="section-icon">🏆</div>
@@ -513,192 +481,90 @@
       </div>
       <div class="grid">
         <div class="card">
-          <div class="card-img-wrap">
-            <img src="./img/fresa-con-crema.jpeg" alt="Fresa con crema" />
-          </div>
+          <div class="card-img-wrap"><img src="./img/fresa-con-crema.jpeg" alt="Fresa con crema" /></div>
           <div class="card-body">
             <div class="card-name">Fresas con crema</div>
-            <div class="card-desc">
-              Un sabor de helado, acompañado de salsa de chocolate, trozos de
-              fresa, barquillo y chantilly.
-            </div>
-            <div class="card-footer">
-              <div>
-                <div class="price-label">Precio</div>
-                <div class="price">$ 15.000</div>
-              </div>
-            </div>
+            <div class="card-desc">Un sabor de helado, acompañado de salsa de chocolate, trozos de fresa, barquillo y chantilly.</div>
+            <div class="card-footer"><div><div class="price-label">Precio</div><div class="price">$ 15.000</div></div></div>
           </div>
         </div>
         <div class="card">
-          <div class="card-img-wrap">
-            <img src="./img/copa-gelatina.jpeg" alt="Copa Gelatina" />
-          </div>
+          <div class="card-img-wrap"><img src="./img/copa-gelatina.jpeg" alt="Copa Gelatina" /></div>
           <div class="card-body">
             <div class="card-name">Copa Gelatina</div>
-            <div class="card-desc">
-              Dos sabores de helado, acompañados de trozos de gelatina, leche
-              condensada, barquillo y chantilly.
-            </div>
-            <div class="card-footer">
-              <div>
-                <div class="price-label">Precio</div>
-                <div class="price">$ 17.000</div>
-              </div>
-            </div>
+            <div class="card-desc">Dos sabores de helado, acompañados de trozos de gelatina, leche condensada, barquillo y chantilly.</div>
+            <div class="card-footer"><div><div class="price-label">Precio</div><div class="price">$ 17.000</div></div></div>
           </div>
         </div>
         <div class="card">
-          <div class="card-img-wrap">
-            <img src="./img/salpicon-especial.jpeg" alt="Salpicon especial" />
-          </div>
+          <div class="card-img-wrap"><img src="./img/salpicon-especial.jpeg" alt="Salpicon especial" /></div>
           <div class="card-body">
             <div class="card-name">Salpicón especial</div>
-            <div class="card-desc">
-              Mezcla de salpicón, acompañado de dos sabores de helado, queso,
-              leche condensada, lluvia de chocolate, cereza, barquillos y
-              chantilly.
-            </div>
-            <div class="card-footer">
-              <div>
-                <div class="price-label">Precio</div>
-                <div class="price">$ 19.000</div>
-              </div>
-            </div>
+            <div class="card-desc">Mezcla de salpicón, acompañado de dos sabores de helado, queso, leche condensada, lluvia de chocolate, cereza, barquillos y chantilly.</div>
+            <div class="card-footer"><div><div class="price-label">Precio</div><div class="price">$ 19.000</div></div></div>
           </div>
         </div>
         <div class="card">
-          <div class="card-img-wrap">
-            <img src="./img/salpicon-especial.jpeg" alt="Salpicon sencillo" />
-          </div>
+          <div class="card-img-wrap"><img src="./img/Salpicón sencillo.png" alt="Salpicon sencillo" /></div>
           <div class="card-body">
             <div class="card-name">Salpicón sencillo</div>
-            <div class="card-desc">
-              Mezcla de salpicon, acompañado de un sabor de helado, leche
-              condensada, barquillo.
-            </div>
-            <div class="card-footer">
-              <div>
-                <div class="price-label">Precio</div>
-                <div class="price">$ 10.000</div>
-              </div>
-            </div>
+            <div class="card-desc">Mezcla de salpicón, acompañado de un sabor de helado, leche condensada, barquillo.</div>
+            <div class="card-footer"><div><div class="price-label">Precio</div><div class="price">$ 10.000</div></div></div>
           </div>
         </div>
         <div class="card">
-          <div class="card-img-wrap">
-            <img src="./img/copa-brevas.jpeg" alt="Copa brevas" />
-          </div>
+          <div class="card-img-wrap"><img src="./img/copa-brevas.jpeg" alt="Copa brevas" /></div>
           <div class="card-body">
             <div class="card-name">Copa Brevas</div>
-            <div class="card-desc">
-              Un sabor de helado, acompañado de salsa de arequipe, trozos de
-              brevas en almibar, queso, barquillos y chantilly
-            </div>
-            <div class="card-footer">
-              <div>
-                <div class="price-label">Precio</div>
-                <div class="price">$ 14.000</div>
-              </div>
-            </div>
+            <div class="card-desc">Un sabor de helado, acompañado de salsa de arequipe, trozos de brevas en almíbar, queso, barquillos y chantilly.</div>
+            <div class="card-footer"><div><div class="price-label">Precio</div><div class="price">$ 14.000</div></div></div>
           </div>
         </div>
         <div class="card">
-          <div class="card-img-wrap">
-            <img src="./img/copa-queso.png" alt="Copa queso" />
-          </div>
+          <div class="card-img-wrap"><img src="./img/copa-queso.png" alt="Copa queso" /></div>
           <div class="card-body">
             <div class="card-name">Copa Queso</div>
-            <div class="card-desc">
-              Dos sabores de helado, acompañados de salsa de arequipe, queso,
-              fresa y chantilly.
-            </div>
-            <div class="card-footer">
-              <div>
-                <div class="price-label">Precio</div>
-                <div class="price">$ 19.000</div>
-              </div>
-            </div>
+            <div class="card-desc">Dos sabores de helado, acompañados de salsa de arequipe, queso, fresa y chantilly.</div>
+            <div class="card-footer"><div><div class="price-label">Precio</div><div class="price">$ 19.000</div></div></div>
           </div>
         </div>
         <div class="card">
-          <div class="card-img-wrap">
-            <img src="./img/copa-frutos-rojos.png" alt="Copa Frutos Rojos" />
-          </div>
+          <div class="card-img-wrap"><img src="./img/copa-frutos-rojos.png" alt="Copa Frutos Rojos" /></div>
           <div class="card-body">
             <div class="card-name">Copa Frutos rojos</div>
-            <div class="card-desc">
-              Dos sabores de helado, acompañados de trozos de mora, fresa, salsa
-              de mora, barquillos y chantilly.
-            </div>
-            <div class="card-footer">
-              <div>
-                <div class="price-label">Precio</div>
-                <div class="price">$ 17.000</div>
-              </div>
-            </div>
+            <div class="card-desc">Dos sabores de helado, acompañados de trozos de mora, fresa, salsa de mora, barquillos y chantilly.</div>
+            <div class="card-footer"><div><div class="price-label">Precio</div><div class="price">$ 17.000</div></div></div>
           </div>
         </div>
         <div class="card">
-          <div class="card-img-wrap">
-            <img
-              src="./img/copa-frutos-amarillos.jpeg" alt="Copa frutos amarillos">
-          </div>
+          <div class="card-img-wrap"><img src="./img/copa-frutos-amarillos.jpeg" alt="Copa frutos amarillos" /></div>
           <div class="card-body">
             <div class="card-name">Copa Frutos amarillos</div>
-            <div class="card-desc">
-              Dos sabores de heldo, acompañados de durazno, mango, pulpa de
-              maracuya, leche condensada, cereza, barquillos y chantilly.
-            </div>
-            <div class="card-footer">
-              <div>
-                <div class="price-label">Precio</div>
-                <div class="price">$ 17.000</div>
-              </div>
-            </div>
+            <div class="card-desc">Dos sabores de helado, acompañados de durazno, mango, pulpa de maracuyá, leche condensada, cereza, barquillos y chantilly.</div>
+            <div class="card-footer"><div><div class="price-label">Precio</div><div class="price">$ 17.000</div></div></div>
           </div>
         </div>
         <div class="card">
-          <div class="card-img-wrap">
-            <img src="./img/ensalada-especial.jpeg" alt="Ensalada especial" />
-          </div>
+          <div class="card-img-wrap"><img src="./img/ensalada-especial.jpeg" alt="Ensalada especial" /></div>
           <div class="card-body">
             <div class="card-name">Ensalada especial</div>
-            <div class="card-desc">
-              Variedad de frutas acompañadas de dos sabores de helado, queso,
-              barquillo y chantilly
-            </div>
-            <div class="card-footer">
-              <div>
-                <div class="price-label">Precio</div>
-                <div class="price">$ 23.000</div>
-              </div>
-            </div>
+            <div class="card-desc">Variedad de frutas acompañadas de dos sabores de helado, queso, barquillo y chantilly.</div>
+            <div class="card-footer"><div><div class="price-label">Precio</div><div class="price">$ 23.000</div></div></div>
           </div>
         </div>
         <div class="card">
-          <div class="card-img-wrap">
-            <img src="./img/ensalada-especial.jpeg" alt="Ensalada especial" />
-          </div>
+          <div class="card-img-wrap"><img src="./img/Ensalada sencilla.png" alt="Ensalada sencilla" /></div>
           <div class="card-body">
             <div class="card-name">Ensalada sencilla</div>
-            <div class="card-desc">
-              Variedad de frutas acompañadas de un sabor de helado, barquillo y
-              queso.
-            </div>
-            <div class="card-footer">
-              <div>
-                <div class="price-label">Precio</div>
-                <div class="price">$ 16.000</div>
-              </div>
-            </div>
+            <div class="card-desc">Variedad de frutas acompañadas de un sabor de helado, barquillo y queso.</div>
+            <div class="card-footer"><div><div class="price-label">Precio</div><div class="price">$ 16.000</div></div></div>
           </div>
         </div>
       </div>
 
       <div class="divider"></div>
 
-      <!-- SECCIÓN: PARA LOS PEQUES -->
+      <!-- PARA LOS PEQUES -->
       <div class="section">
         <div class="section-header">
           <div class="section-icon">🎠</div>
@@ -710,78 +576,42 @@
       </div>
       <div class="grid">
         <div class="card">
-          <div class="card-img-wrap">
-            <img src="./img/copa-pinguino.jpeg" alt="Copa Pingüino" />
-          </div>
+          <div class="card-img-wrap"><img src="./img/copa-pinguino.jpeg" alt="Copa Pingüino" /></div>
           <div class="card-body">
             <div class="card-name">Copa Pingüino</div>
-            <div class="card-desc">
-              Cucurucho con helado, galletas oreo y una figura de pinguino
-            </div>
-            <div class="card-footer">
-              <div>
-                <div class="price-label">Precio</div>
-                <div class="price">$ 9.000</div>
-              </div>
-            </div>
+            <div class="card-desc">Cucurucho con helado, galletas oreo y una figura de pingüino.</div>
+            <div class="card-footer"><div><div class="price-label">Precio</div><div class="price">$ 9.000</div></div></div>
           </div>
         </div>
         <div class="card">
-          <div class="card-img-wrap">
-            <img src="./img/copa-raton.jpeg" alt="Copa Ratón" />
-          </div>
+          <div class="card-img-wrap"><img src="./img/copa-raton.jpeg" alt="Copa Ratón" /></div>
           <div class="card-body">
             <div class="card-name">Copa Ratón</div>
-            <div class="card-desc">
-              Cucurucho con helado de fresa y galletas y una figura de ratoncito
-            </div>
-            <div class="card-footer">
-              <div>
-                <div class="price-label">Precio</div>
-                <div class="price">$ 9.000</div>
-              </div>
-            </div>
+            <div class="card-desc">Cucurucho con helado de fresa, galletas y una figura de ratoncito.</div>
+            <div class="card-footer"><div><div class="price-label">Precio</div><div class="price">$ 9.000</div></div></div>
           </div>
         </div>
         <div class="card">
-          <div class="card-img-wrap">
-            <img src="./img/copa-pato.jpeg" alt="Copa Pato" />
-          </div>
+          <div class="card-img-wrap"><img src="./img/copa-pato.jpeg" alt="Copa Pato" /></div>
           <div class="card-body">
             <div class="card-name">Copa Pato</div>
-            <div class="card-desc">
-              Cucurucho con helado y masmelos y una figura de pato
-            </div>
-            <div class="card-footer">
-              <div>
-                <div class="price-label">Precio</div>
-                <div class="price">$ 9.000</div>
-              </div>
-            </div>
+            <div class="card-desc">Cucurucho con helado y masmelos y una figura de pato.</div>
+            <div class="card-footer"><div><div class="price-label">Precio</div><div class="price">$ 9.000</div></div></div>
           </div>
         </div>
         <div class="card">
-          <div class="card-img-wrap">
-            <img src="./img/copa-carrito.jpeg" alt="Copa Carrito" />
-          </div>
+          <div class="card-img-wrap"><img src="./img/copa-carrito.jpeg" alt="Copa Carrito" /></div>
           <div class="card-body">
             <div class="card-name">Copa Carrito</div>
-            <div class="card-desc">
-              Helado en forma de carrito con galletas Oreo de llantas
-            </div>
-            <div class="card-footer">
-              <div>
-                <div class="price-label">Precio</div>
-                <div class="price">$ 10.000</div>
-              </div>
-            </div>
+            <div class="card-desc">Helado en forma de carrito con galletas Oreo de llantas.</div>
+            <div class="card-footer"><div><div class="price-label">Precio</div><div class="price">$ 10.000</div></div></div>
           </div>
         </div>
       </div>
 
       <div class="divider"></div>
 
-      <!-- SECCIÓN: POSTRES -->
+      <!-- POSTRES -->
       <div class="section">
         <div class="section-header">
           <div class="section-icon">🍫</div>
@@ -793,46 +623,26 @@
       </div>
       <div class="grid">
         <div class="card">
-          <div class="card-img-wrap">
-            <img src="./img/brownie-con-helado.jpeg" alt="Brownie con Helado" />
-          </div>
+          <div class="card-img-wrap"><img src="./img/brownie-con-helado.jpeg" alt="Brownie con Helado" /></div>
           <div class="card-body">
             <div class="card-name">Brownie con helado</div>
-            <div class="card-desc">
-              Brownie acompañado de un sabor de helado, fresas, salsa a
-              elección, cereza y chantilly.
-            </div>
-            <div class="card-footer">
-              <div>
-                <div class="price-label">Precio</div>
-                <div class="price">$ 14.000</div>
-              </div>
-            </div>
+            <div class="card-desc">Brownie acompañado de un sabor de helado, fresas, salsa a elección, cereza y chantilly.</div>
+            <div class="card-footer"><div><div class="price-label">Precio</div><div class="price">$ 14.000</div></div></div>
           </div>
         </div>
         <div class="card">
-          <div class="card-img-wrap">
-            <img src="./img/banana.png.jpeg" alt="Banana Split" />
-          </div>
+          <div class="card-img-wrap"><img src="./img/banana.png.jpeg" alt="Banana Split" /></div>
           <div class="card-body">
             <div class="card-name">Banana Split</div>
-            <div class="card-desc">
-              Tres sabores de helado acompañados de banano, salsa a elección,
-              barquillos, cereza y chantilly.
-            </div>
-            <div class="card-footer">
-              <div>
-                <div class="price-label">Precio</div>
-                <div class="price">$ 15.000</div>
-              </div>
-            </div>
+            <div class="card-desc">Tres sabores de helado acompañados de banano, salsa a elección, barquillos, cereza y chantilly.</div>
+            <div class="card-footer"><div><div class="price-label">Precio</div><div class="price">$ 15.000</div></div></div>
           </div>
         </div>
       </div>
 
       <div class="divider"></div>
 
-      <!-- SECCIÓN: BEBIDAS -->
+      <!-- BEBIDAS -->
       <div class="section">
         <div class="section-header">
           <div class="section-icon">🥤</div>
@@ -844,21 +654,79 @@
       </div>
       <div class="grid single">
         <div class="card">
-          <div class="card-img-wrap" style="aspect-ratio: 4/3">
+          <div class="card-img-wrap" style="aspect-ratio: 2.5/3.5">
             <img src="./img/malteada-especial.jpeg" alt="Malteada Especial" />
           </div>
           <div class="card-body">
             <div class="card-name">Malteada Especial</div>
-            <div class="card-desc">
-              Malteada del sabor de helado que elijas, grajeas de colores,
-              cerezas, barquillos y chantilly.
-            </div>
-            <div class="card-footer">
-              <div>
-                <div class="price-label">Precio</div>
-                <div class="price">$ 16.000</div>
+            <div class="card-desc">Malteada del sabor de helado que elijas, grajeas de colores, cerezas, barquillos y chantilly.</div>
+            <div class="card-footer"><div><div class="price-label">Precio</div><div class="price">$ 16.000</div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- ══ REDES SOCIALES ══ -->
+      <div class="social-section">
+        <div class="section-header" style="margin-bottom: 16px;">
+          <div class="section-icon">💬</div>
+          <div>
+            <div class="section-title">Encuéntranos</div>
+            <div class="section-sub">Síguenos y escríbenos</div>
+          </div>
+        </div>
+
+        <div class="social-card">
+          <div class="social-title">¡Sigamos en contacto! 🍦</div>
+          <div class="social-subtitle">Redes sociales</div>
+
+          <div class="social-links">
+
+            <!-- INSTAGRAM -->
+            <a class="social-btn instagram" href="https://instagram.com/alaskafrutal_oficial" target="_blank" rel="noopener">
+              <div class="social-btn-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2" y="2" width="20" height="20" rx="6" stroke="white" stroke-width="2"/>
+                  <circle cx="12" cy="12" r="4" stroke="white" stroke-width="2"/>
+                  <circle cx="17.5" cy="6.5" r="1.5" fill="white"/>
+                </svg>
               </div>
-            </div>
+              <div class="social-btn-text">
+                <span class="social-btn-label">Instagram</span>
+                <span class="social-btn-handle">@alaskafrutal_oficial</span>
+              </div>
+              <span class="social-btn-arrow">›</span>
+            </a>
+
+            <!-- WHATSAPP -->
+            <a class="social-btn whatsapp" href="https://wa.me/573114017432?text=Hola%20Alaska%20Frutal!%20Vi%20su%20catálogo%20y%20quiero%20más%20información%20🍦" target="_blank" rel="noopener">
+              <div class="social-btn-icon">
+                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+              </div>
+              <div class="social-btn-text">
+                <span class="social-btn-label">WhatsApp — Escríbenos</span>
+                <span class="social-btn-handle">311 401 7432</span>
+              </div>
+              <span class="social-btn-arrow">›</span>
+            </a>
+
+            <!-- TIKTOK -->
+            <a class="social-btn tiktok" href="https://tiktok.com/@alaska.frutal" target="_blank" rel="noopener">
+              <div class="social-btn-icon">
+                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/>
+                </svg>
+              </div>
+              <div class="social-btn-text">
+                <span class="social-btn-label">TikTok</span>
+                <span class="social-btn-handle">@alaska.frutal</span>
+              </div>
+              <span class="social-btn-arrow">›</span>
+            </a>
+
           </div>
         </div>
       </div>
@@ -868,31 +736,49 @@
         <div class="footer-logo">
           <img src="./img/Logo Alaska.png" alt="Alaska Frutal" />
         </div>
+
+        <!-- Iconos rápidos en el footer -->
+        <div class="footer-socials">
+          <a class="footer-social-dot" href="https://instagram.com/alaskafrutal_oficial" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="20" height="20" rx="6" stroke="white" stroke-width="2.2" fill="none"/>
+              <circle cx="12" cy="12" r="4" stroke="white" stroke-width="2.2" fill="none"/>
+              <circle cx="17.5" cy="6.5" r="1.5" fill="white"/>
+            </svg>
+          </a>
+          <a class="footer-social-dot" href="https://wa.me/573114017432" target="_blank" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </a>
+          <a class="footer-social-dot" href="https://tiktok.com/@alaska.frutal" target="_blank" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/>
+            </svg>
+          </a>
+        </div>
+
         <p>Alaska Frutal</p>
-        <p style="margin-top: 4px; opacity: 0.6">© 2026 · Hecho con ❤️</p>
+        <p style="margin-top:4px; opacity:0.6;">© 2026 · Hecho con ❤️</p>
       </div>
     </div>
 
     <script>
-      // Intersection Observer for card animations
       const cards = document.querySelectorAll(".card");
       const observer = new IntersectionObserver(
         (entries) => {
-          entries.forEach((entry, i) => {
+          entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              setTimeout(
-                () => {
-                  entry.target.classList.add("visible");
-                },
-                60 * (Array.from(cards).indexOf(entry.target) % 4),
-              );
+              const idx = Array.from(cards).indexOf(entry.target);
+              setTimeout(() => {
+                entry.target.classList.add("visible");
+              }, 60 * (idx % 4));
               observer.unobserve(entry.target);
             }
           });
         },
-        { threshold: 0.1 },
+        { threshold: 0.1 }
       );
-
       cards.forEach((card) => observer.observe(card));
     </script>
   </body>
